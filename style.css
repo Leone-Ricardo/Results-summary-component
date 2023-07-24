@@ -1,0 +1,257 @@
+:root {
+  /*primary colors */
+  --light-red: hsla(0, 100%, 67%, 0.8);
+  --orangey-yellow: hsla(39, 100%, 56%, 0.8);
+  --green-teal: hsla(166, 100%, 37%, 0.8);
+  --cobalt-blue: hsla(234, 85%, 45%, 0.8);
+  --light-red-bg: hsla(0, 100%, 67%, 0.1);
+  --orangey-yellow-bg: hsl(39, 100%, 56%, 0.1);
+  --green-teal-bg: hsl(166, 100%, 37%, 0.1);
+  --cobalt-blue-bg: hsl(234, 85%, 45%, 0.1);
+  /*background gradient*/
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  /*background circle gradient*/
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /*neutral colors*/
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 10px 10px 20px var(--pale-blue);
+  border-radius: 20px;
+}
+
+.results {
+  width: 20em;
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  height: 100%;
+}
+
+.your-result,
+.summary-title {
+  font-size: 20px;
+  color: var(--light-lavender);
+}
+
+.circle {
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  border-radius: 50%;
+  margin: 2em 0 1em;
+  padding: 3em;
+}
+
+.value {
+  text-align: center;
+  font-size: 72px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 60px;
+}
+
+.of {
+  display: flex;
+  justify-content: center;
+  color: hsla(241, 100%, 89%, 0.5);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.result-title {
+  color: var(--white);
+  font-size: 32px;
+  margin-top: 0.5em;
+}
+
+.text {
+  text-align: center;
+  color: var(--light-lavender);
+  padding: 0 3em;
+  margin: 1em 0;
+}
+
+.summary {
+  padding: 2em;
+}
+
+.summary-title {
+  color: var(--dark-gray-blue);
+}
+
+ul {
+  margin-top: 1.5em;
+}
+
+li {
+  list-style: none;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 18em;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+p {
+  display: flex;
+  color: hsla(224, 30%, 27%, 0.9);
+}
+
+.li-red {
+  background-color: var(--light-red-bg);
+}
+.red {
+  color: var(--light-red);
+}
+.li-yellow {
+  background-color: var(--orangey-yellow-bg);
+}
+.yellow {
+  color: var(--orangey-yellow);
+}
+.li-green {
+  background-color: var(--green-teal-bg);
+}
+.green {
+  color: var(--green-teal);
+}
+.li-blue {
+  background-color: var(--cobalt-blue-bg);
+}
+.blue {
+  color: var(--cobalt-blue);
+}
+
+.of-summary {
+  color: hsla(224, 30%, 27%, 0.5);
+  padding-left: 0.5em;
+}
+
+img {
+  padding-right: 1em;
+}
+
+button {
+  border: none;
+  color: var(--white);
+  font-size: 18px;
+  background-color: var(--dark-gray-blue);
+  border-radius: 100px;
+  margin-top: 1em;
+  padding: 1em;
+  width: 100%;
+}
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.attribution a {
+  color: hsl(0, 94%, 45%);
+}
+
+/*---------------------- hover style -----------------*/
+button:hover {
+  background-color: hsla(224, 30%, 27%, 0.9);
+  cursor: pointer;
+}
+
+button:active {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+/*--------------------------- media querie ---------------------------------*/
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+
+  .results {
+    border-radius: 0 0 40px 40px;
+    width: 100%;
+    padding-bottom: 1em;
+  }
+
+  .circle {
+    padding: 1.5em 2em 1em;
+    margin: 1.5em 0 0.5em;
+  }
+
+  .of {
+    margin-top: 0.2em;
+  }
+
+  .value {
+    font-size: 52px;
+  }
+
+  .result-title {
+    font-size: 24px;
+  }
+
+  .text {
+    padding: 0 2.5em;
+  }
+
+  .summary {
+    padding-top: 1.5em;
+  }
+
+  li {
+    font-size: 16px;
+    width: 85vw;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .attribution {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+  }
+}
